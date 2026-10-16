@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Juee Jahagirdar</title>
+<meta name="description" content="Juee Jahagirdar — final-year undergraduate at IIT Bombay working on empirical AI safety: interpretability, representation geometry, agentic failure modes.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Juee Jahagirdar">
+<meta property="og:description" content="Final-year undergraduate at IIT Bombay. Empirical AI safety: interpretability, representation geometry, agentic failure modes.">
+<meta property="og:url" content="https://juee-j.github.io/">
+<meta property="og:image" content="https://juee-j.github.io/assets/portrait.jpg">
+<meta name="twitter:card" content="summary">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="wordmark" href="index.html">Juee Jahagirdar</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="cv/Juee_Jahagirdar_CV.pdf">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="page">
+
+    <div class="hero">
+      <div class="hero-portrait">
+        <img src="assets/portrait.jpg" alt="Juee Jahagirdar">
+        <p class="caption">Mumbai, 2026</p>
+      </div>
+
+      <div>
+        <h1>Juee Jahagirdar</h1>
+        <p class="hero-affil">Final-year undergraduate, IIT Bombay <span>&nbsp;/&nbsp; independent AI safety research</span></p>
+
+        <div class="hero-body">
+          <p>Most of what I do is empirical: train or probe a model, find where its behaviour comes apart, and work out whether that failure is visible from the inside. That has taken me through belief-state geometry in transformers, spectral structure in LLM activations, and backdoor propagation between agents.</p>
+          <p>My background is in mechanical engineering, and my first research was in dynamical systems. A lot of how I think about models still comes from there.</p>
+        </div>
+
+        <ul class="linkrow">
+          <li><a href="cv/Juee_Jahagirdar_CV.pdf">CV</a></li>
+          <li><a href="https://github.com/juee-j">GitHub</a></li>
+          <li><a href="#" data-placeholder="scholar">Google Scholar</a></li>
+          <li><a href="mailto:jueejahagirdar@gmail.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <section>
+      <div class="section-head">
+        <h2>What I work on</h2>
+        <p>Three threads that keep recurring across the work.</p>
+      </div>
+
+      <div class="areas">
+        <div class="area">
+          <h3>Interpretability and world models</h3>
+          <p>Belief-state geometry in transformers, spectral signatures in LLM activations, and failure modes that turn out to depend on architecture rather than task.</p>
+        </div>
+        <div class="area">
+          <h3>Safety and threat models</h3>
+          <p>Goal stability and distributional robustness as alignment-relevant properties; inner alignment failures in sequence predictors; the limits of monitoring across architectures.</p>
+        </div>
+        <div class="area">
+          <h3>Dynamical systems</h3>
+          <p>Invariant set computation through RKHS variational optimisation, and attractor geometry learned directly from time-series data.</p>
+        </div>
+      </div>
+
+      <p class="small" style="margin-top:1.5rem;"><a href="research.html">More on each of these</a></p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Selected work</h2>
+      </div>
+
+      <div class="entries">
+
+        <article class="entry">
+          <h3>Hausdorff Metric-Based Kernel Flows for Learning Invariant Sets in Dynamical Systems</h3>
+          <ul class="keywords">
+            <li>dynamical systems</li>
+            <li>kernel methods</li>
+            <li>first author</li>
+          </ul>
+          <p>A variational RKHS framework that reconstructs invariant sets, including saddle-type and non-attracting structures, straight from time-series data.</p>
+          <div class="entry-meta">
+            <span>Physica D: Nonlinear Phenomena, 2026</span>
+            <a href="publications.html">Details</a>
+          </div>
+        </article>
+
+        <article class="entry">
+          <h3>Belief State Geometry in Non-Ergodic Transformers</h3>
+          <ul class="keywords">
+            <li>interpretability</li>
+            <li>representation geometry</li>
+            <li>transformers</li>
+          </ul>
+          <p>Asks whether a transformer's residual stream encodes the boundary between ergodic components it was never trained across. It does not: unseen sequences land on the same manifold as the training distribution.</p>
+          <div class="entry-meta">
+            <span>2026, independent</span>
+            <a href="https://github.com/juee-j/mess3-belief-geometry">Code</a>
+            <a href="projects.html">Details</a>
+          </div>
+        </article>
+
+        <article class="entry">
+          <h3>Temporal Dynamics and Spectral Signatures in LLM Activations</h3>
+          <ul class="keywords">
+            <li>monitoring</li>
+            <li>hallucination detection</li>
+            <li>activations</li>
+          </ul>
+          <p>Spectral features improved hallucination detection in one model family and not another, which puts a limit on how far a monitoring tool transfers across architectures.</p>
+          <div class="entry-meta">
+            <span>2025–26, independent</span>
+            <a href="projects.html">Details</a>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="small" style="margin-top:1.5rem;"><a href="projects.html">All projects</a></p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="sitefoot">
+  <div class="sitefoot-inner">
+    <span>Juee Jahagirdar, 2026</span>
+    <nav aria-label="Footer">
+      <a href="https://github.com/juee-j">GitHub</a>
+      <a href="mailto:jueejahagirdar@gmail.com">Email</a>
+      <a href="cv/Juee_Jahagirdar_CV.pdf">CV</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

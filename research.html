@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research — Juee Jahagirdar</title>
+<meta name="description" content="Research directions: interpretability and world models, safety and threat models, dynamical systems, Bayesian sequence prediction.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="wordmark" href="index.html">Juee Jahagirdar</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="cv/Juee_Jahagirdar_CV.pdf">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="page" style="padding-top:3rem;">
+
+    <h1>Research</h1>
+    <p class="lead" style="max-width:48ch;">The questions, rather than the repositories. What I have actually built and run is on the <a href="projects.html">projects</a> page.</p>
+
+    <section>
+      <div class="section-head">
+        <h2>Interpretability and world models</h2>
+      </div>
+      <p>If a model has learned something like a world model, that structure should be legible in its representations, and the places where the structure breaks should be legible too. I have been testing that on processes where the ground truth is analytically known, so a claim about geometry can be checked rather than asserted.</p>
+      <p>The result I keep coming back to: a transformer trained on one ergodic component of a process maps sequences from a component it never saw onto the same geometric manifold. The boundary is real in the process and invisible in the representation. That is a problem for anything that hopes to detect distribution shift by looking inside the model.</p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Safety and threat models</h2>
+      </div>
+      <p>Most evaluation looks at what a model says. I am more interested in what a system does, and in whether the harmful action is detectable at the point it happens rather than afterwards. That covers goal stability under distribution shift, inner alignment failure in sequence predictors, and how corrupted behaviour spreads between agents that talk to each other.</p>
+      <p>The monitoring question runs underneath all of it. A detector that works on one model family and fails on another is not a detector, it is a property of that family, and I would like to know which is which before anyone deploys one.</p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Dynamical systems</h2>
+      </div>
+      <p>My first research was on learning invariant sets from trajectory data, using a variational objective in an RKHS with a Hausdorff-distance loss. Invariant sets that are not attracting are the hard case, because you cannot find them by simply running the system forward.</p>
+      <p>This is where I learned to care about failure taxonomies. Roughly a fifth of the systems we tried were out of scope, and classifying why was more informative than the successes.</p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Earlier: Bayesian sequence prediction</h2>
+      </div>
+      <p>In 2025 I worked on non-stationary sequence prediction and model switching, which is where the CTS implementation for Monte-Carlo AIXI came from. An agent that accumulates history optimally under a fixed distribution can be permanently crippled by a rule change, because the history it has is evidence for a world that no longer exists.</p>
+      <p>I am not working in this area at the moment, and I would want to re-read before claiming current expertise. It stays here because it shaped how I think about distribution shift, which does run through everything above.</p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Beyond the technical work</h2>
+      </div>
+      <p>I follow AI policy and technical governance, particularly the question of how empirical results about model behaviour turn into evaluation and oversight that mean anything. I am working on a literature review in this area.</p>
+    </section>
+
+
+  </div>
+</main>
+
+<footer class="sitefoot">
+  <div class="sitefoot-inner">
+    <span>Juee Jahagirdar, 2026</span>
+    <nav aria-label="Footer">
+      <a href="https://github.com/juee-j">GitHub</a>
+      <a href="mailto:jueejahagirdar@gmail.com">Email</a>
+      <a href="cv/Juee_Jahagirdar_CV.pdf">CV</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publications — Juee Jahagirdar</title>
+<meta name="description" content="Publications by Juee Jahagirdar, including Hausdorff Metric-Based Kernel Flows for Learning Invariant Sets in Dynamical Systems (Physica D, 2026).">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="wordmark" href="index.html">Juee Jahagirdar</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="cv/Juee_Jahagirdar_CV.pdf">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="page" style="padding-top:3rem;">
+
+    <h1>Publications</h1>
+
+    <section style="margin-top:2.5rem;">
+      <div class="pub">
+        <p class="title">Hausdorff Metric-Based Kernel Flows for Learning Invariant Sets in Dynamical Systems: A Variational Approach</p>
+        <p class="authors"><strong>Jahagirdar, J.</strong>, Hamzi, B., Owhadi, H., Kevrekidis, Y.</p>
+        <p class="venue">Physica D: Nonlinear Phenomena, 2026</p>
+
+        <p>A variational framework in a reproducing kernel Hilbert space that learns invariant sets of dynamical systems directly from time-series data, including saddle-type and non-attracting structures that forward simulation cannot reach. The kernel is learned through a bilevel scheme: inner optimisation on an invariant-set energy, outer kernel update by cross-validation.</p>
+
+        <p class="result" style="max-width:62ch;">Evaluated on 130 in-scope chaotic systems from <code>dysts</code>, d = 3 to 6.
+98 of 130 reconstructed with Hausdorff distance below 5.0, median HD 0.323.
+Degrades gracefully with dimension: median HD 0.079 at d = 3, 0.473 at d &ge; 6.
+37 further systems classified as out of scope by structural cause.</p>
+
+        <div class="entry-meta">
+          <a href="https://doi.org/10.1016/j.physd.2026.135287">doi.org/10.1016/j.physd.2026.135287</a>
+          <a href="https://github.com/juee-j/Learning-Invariant-Sets-KFs">Code</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="sitefoot">
+  <div class="sitefoot-inner">
+    <span>Juee Jahagirdar, 2026</span>
+    <nav aria-label="Footer">
+      <a href="https://github.com/juee-j">GitHub</a>
+      <a href="mailto:jueejahagirdar@gmail.com">Email</a>
+      <a href="cv/Juee_Jahagirdar_CV.pdf">CV</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

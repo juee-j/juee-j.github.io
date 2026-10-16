@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — Juee Jahagirdar</title>
+<meta name="description" content="Experiments and systems: belief-state geometry, behavioural override probing, backdoor propagation between agents, LLM activation monitoring, Monte-Carlo AIXI.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="wordmark" href="index.html">Juee Jahagirdar</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="cv/Juee_Jahagirdar_CV.pdf">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="page" style="padding-top:3rem;">
+
+    <h1>Projects</h1>
+    <p class="lead" style="max-width:48ch;">Experiments I ran and code I wrote. The questions behind them are on the <a href="research.html">research</a> page.</p>
+
+    <section>
+      <div class="section-head">
+        <h2>In progress</h2>
+        <p>Running now, and unfinished. Numbers here may move.</p>
+      </div>
+
+      <div class="entries">
+
+        <article class="entry entry-wip">
+          <h3>Induced Backdoor Lateral Propagation</h3>
+          <ul class="keywords">
+            <li>AI security</li>
+            <li>multi-agent</li>
+            <li>backdoors</li>
+            <li>threat models</li>
+          </ul>
+          <p>Whether a behavioural backdoor planted in one agent spreads to the agents it talks to through ordinary interaction, and whether the resulting actions can be caught downstream. Built from scratch as a multi-agent harness with a rotating provider stack, run across baseline, dual-poison, aggressive, susceptible and ablation arms.</p>
+          <p>Detection results exist for the arms run so far. The open question is whether propagation survives when the receiving agent has no reason to trust the sender.</p>
+          <div class="entry-meta">
+            <span>2026, independent, ongoing</span>
+            <a href="https://github.com/juee-j/Induced_Backdoor_Lateral_Prop">Code</a>
+          </div>
+        </article>
+
+<!-- ===========================================================
+     AgentHarm entry goes here. Duplicate the article block above,
+     then replace the title, keywords, and the two paragraphs.
+     Keep "ongoing" in the entry-meta line.
+     =========================================================== -->
+
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Completed</h2>
+      </div>
+
+      <div class="entries">
+
+        <article class="entry">
+          <h3>Belief State Geometry in Non-Ergodic Transformers</h3>
+          <ul class="keywords">
+            <li>interpretability</li>
+            <li>representation geometry</li>
+            <li>transformers</li>
+            <li>pre-registered</li>
+          </ul>
+          <p>Whether a transformer's residual stream makes the boundary between ergodic components visible, when it was only ever trained on one side of that boundary. Predictions were registered before the experiment ran.</p>
+          <p class="result">Residual stream linearly encodes analytical belief states; four process-type clusters separate as context grows.
+Models trained on CW sequences map unseen CCW sequences onto the same manifold (r = 0.92–0.96, inter/intra-cluster ratio 1.005).
+The non-ergodic boundary is invisible to the learned representation.</p>
+          <div class="entry-meta">
+            <span>2026, independent</span>
+            <a href="https://github.com/juee-j/mess3-belief-geometry">Code</a>
+          </div>
+        </article>
+
+        <article class="entry">
+          <h3>Behavioural Override and the Boundary Probe</h3>
+          <ul class="keywords">
+            <li>probing</li>
+            <li>finetuning</li>
+            <li>representation geometry</li>
+          </ul>
+          <p>A follow-up: take the model from above, finetune it across the boundary with a forced behavioural override, and ask whether linear and non-linear probes degrade the same way. They do not.</p>
+          <p class="result">20 seeds. Linear probe 0.800 &rarr; 0.769. MLP probe 0.861 &rarr; 0.851. Widening gap, bootstrap p = 0.0105.
+Narrow finetuning selectively degrades linear recoverability while the non-linear boundary information survives.</p>
+          <div class="entry-meta">
+            <span>2026, independent</span>
+          </div>
+        </article>
+
+        <article class="entry">
+          <h3>Temporal Dynamics and Spectral Signatures in LLM Activations</h3>
+          <ul class="keywords">
+            <li>monitoring</li>
+            <li>hallucination detection</li>
+            <li>activations</li>
+          </ul>
+          <p>Whether the spectral structure of activations over time carries a signal that static features miss. It does, for subtle hallucinations, and only in some architectures.</p>
+          <p class="result">Spectral entropy improved hallucination detection in Gemma-2-2B and not in Qwen2.5.
+Static features stayed better for geometrically obvious failures; a limit on cross-architecture monitoring tools.</p>
+          <div class="entry-meta">
+            <span>Dec 2025 – Jan 2026, independent</span>
+          </div>
+        </article>
+
+        <article class="entry">
+          <h3>CTS in Monte-Carlo AIXI</h3>
+          <ul class="keywords">
+            <li>Bayesian sequence prediction</li>
+            <li>planning</li>
+            <li>non-stationarity</li>
+          </ul>
+          <p>A Factored CTS policy for a Monte-Carlo AIXI agent, separating action-probability modelling from environment dynamics, then wired into the MCTS planner.</p>
+          <p class="result">In non-stationary GridWorld, CTS recovers from rule changes that leave CTW-based agents permanently broken.</p>
+          <div class="entry-meta">
+            <span>Jul – Nov 2025, with Cole Wyeth (University of Waterloo)</span>
+          </div>
+        </article>
+
+        <article class="entry">
+          <h3>Variational Kernel Flows for Invariant Sets</h3>
+          <ul class="keywords">
+            <li>dynamical systems</li>
+            <li>kernel methods</li>
+            <li>JAX</li>
+          </ul>
+          <p>The implementation and benchmark pipeline behind the Physica D paper: bilevel optimisation, train/test partitioning, and a failure-mode taxonomy for the systems the method cannot handle.</p>
+          <div class="entry-meta">
+            <span>Nov 2024 – present, with Dr. Boumediene Hamzi</span>
+            <a href="https://github.com/juee-j/Learning-Invariant-Sets-KFs">Code</a>
+            <a href="publications.html">Paper</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+  </div>
+</main>
+
+<footer class="sitefoot">
+  <div class="sitefoot-inner">
+    <span>Juee Jahagirdar, 2026</span>
+    <nav aria-label="Footer">
+      <a href="https://github.com/juee-j">GitHub</a>
+      <a href="mailto:jueejahagirdar@gmail.com">Email</a>
+      <a href="cv/Juee_Jahagirdar_CV.pdf">CV</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
